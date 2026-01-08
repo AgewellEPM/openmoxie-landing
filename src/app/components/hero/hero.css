@@ -16,6 +16,23 @@
   z-index: 2;
 }
 
+.hero-logo {
+  margin-bottom: 2rem;
+  animation: float 3s ease-in-out infinite;
+}
+
+.logo-image {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 10px 30px rgba(102, 126, 234, 0.3));
+  transition: transform 0.3s ease;
+}
+
+.logo-image:hover {
+  transform: scale(1.05);
+}
+
 .hero-badge {
   display: inline-flex;
   align-items: center;
@@ -243,5 +260,9 @@
 
   .stat-number {
     font-size: 2rem;
+  }
+
+  .logo-image {
+    max-width: 200px;
   }
 }
