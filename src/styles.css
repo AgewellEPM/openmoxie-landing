@@ -1,0 +1,293 @@
+/* Global Styles - OpenMoxie Dark Theme */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Color Palette */
+  --primary-purple: #667eea;
+  --primary-dark-purple: #764ba2;
+  --accent-pink: #f093fb;
+  --accent-green: #30d158;
+  --accent-blue: #0071e3;
+
+  /* Background Colors */
+  --bg-black: #000000;
+  --bg-dark: #0a0a0a;
+  --bg-card: rgba(255, 255, 255, 0.05);
+
+  /* Text Colors */
+  --text-white: #ffffff;
+  --text-gray: rgba(255, 255, 255, 0.7);
+  --text-dim: rgba(255, 255, 255, 0.6);
+
+  /* Borders */
+  --border-color: rgba(255, 255, 255, 0.1);
+  --border-color-hover: rgba(102, 126, 234, 0.5);
+
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --gradient-accent: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+
+  /* Shadows */
+  --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 10px 30px rgba(102, 126, 234, 0.3);
+  --shadow-lg: 0 15px 40px rgba(102, 126, 234, 0.4);
+
+  /* Typography */
+  --font-primary: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-primary);
+  background: var(--bg-black);
+  color: var(--text-white);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Background Pattern */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(102, 126, 234, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(118, 75, 162, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gradient-primary);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+}
+
+/* Selection Styling */
+::selection {
+  background: rgba(102, 126, 234, 0.3);
+  color: var(--text-white);
+}
+
+/* Utility Classes */
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.text-gradient {
+  background: var(--gradient-accent);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Scroll Animation Base Styles */
+.fade-in-up,
+.fade-in-left,
+.fade-in-right,
+.scale-in,
+.slide-in-left,
+.slide-in-right {
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.fade-in-up {
+  transform: translateY(60px);
+}
+
+.fade-in-left {
+  transform: translateX(-60px);
+}
+
+.fade-in-right {
+  transform: translateX(60px);
+}
+
+.scale-in {
+  transform: scale(0.9);
+}
+
+.slide-in-left {
+  transform: translateX(-100px);
+  opacity: 0;
+}
+
+.slide-in-right {
+  transform: translateX(100px);
+  opacity: 0;
+}
+
+/* Animate In State */
+.fade-in-up.animate-in,
+.fade-in-left.animate-in,
+.fade-in-right.animate-in {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+.scale-in.animate-in {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.slide-in-left.animate-in,
+.slide-in-right.animate-in {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Staggered Children Animation */
+.stagger-children > * {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.stagger-children.animate-in > * {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.stagger-children.animate-in > *:nth-child(1) { transition-delay: 0.1s; }
+.stagger-children.animate-in > *:nth-child(2) { transition-delay: 0.2s; }
+.stagger-children.animate-in > *:nth-child(3) { transition-delay: 0.3s; }
+.stagger-children.animate-in > *:nth-child(4) { transition-delay: 0.4s; }
+.stagger-children.animate-in > *:nth-child(5) { transition-delay: 0.5s; }
+.stagger-children.animate-in > *:nth-child(6) { transition-delay: 0.6s; }
+.stagger-children.animate-in > *:nth-child(7) { transition-delay: 0.7s; }
+.stagger-children.animate-in > *:nth-child(8) { transition-delay: 0.8s; }
+.stagger-children.animate-in > *:nth-child(9) { transition-delay: 0.9s; }
+.stagger-children.animate-in > *:nth-child(10) { transition-delay: 1s; }
+.stagger-children.animate-in > *:nth-child(11) { transition-delay: 1.1s; }
+.stagger-children.animate-in > *:nth-child(12) { transition-delay: 1.2s; }
+
+/* Progress Bar Fill Animation */
+@keyframes fillProgress {
+  from {
+    width: 0%;
+    opacity: 0;
+  }
+  to {
+    width: 100%;
+    opacity: 1;
+  }
+}
+
+.progress-fill {
+  animation: fillProgress 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Counter Animation */
+@keyframes countUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.count-up {
+  animation: countUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Pulse Glow Animation */
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(102, 126, 234, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(102, 126, 234, 0.6);
+  }
+}
+
+.pulse-glow {
+  animation: pulseGlow 2s ease-in-out infinite;
+}
+
+/* Draw Line Animation */
+@keyframes drawLine {
+  from {
+    stroke-dashoffset: 1000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.draw-line {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+}
+
+.draw-line.animate-in {
+  animation: drawLine 2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Fade-in Animation (Legacy) */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+/* Responsive Typography */
+@media (max-width: 1068px) {
+  :root {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 834px) {
+  :root {
+    font-size: 14px;
+  }
+
+  .container {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 1rem;
+  }
+}

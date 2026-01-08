@@ -1,0 +1,204 @@
+<section id="technical" class="tech-section">
+  <div class="tech-container">
+    <div class="section-header fade-in-up">
+      <h2 class="section-title">
+        Built with
+        <span class="title-gradient">Real Technology</span>
+      </h2>
+      <p class="section-subtitle">
+        Native macOS app connecting to OpenMoxie's powerful Django backend
+      </p>
+    </div>
+
+    <div class="architecture-showcase stagger-children">
+      <div class="arch-card spotlight-card fade-in-up">
+        <div class="card-badge">Core Stack</div>
+        <div class="card-icon">🍎</div>
+        <h3 class="card-title">Native macOS Application</h3>
+        <p class="card-description">
+          Built with Swift and AppKit for optimal macOS integration. No web wrappers, no cross-platform frameworks —
+          just pure native performance.
+        </p>
+        <div class="tech-stats">
+          <div class="tech-stat">
+            <span class="stat-number">Swift 5.9+</span>
+            <span class="stat-label">Language</span>
+          </div>
+          <div class="tech-stat">
+            <span class="stat-number">AppKit</span>
+            <span class="stat-label">UI Framework</span>
+          </div>
+        </div>
+        <div class="tech-details">
+          <h4 class="details-title">Native Features</h4>
+          <ul class="details-list">
+            <li>macOS 14+ optimized</li>
+            <li>Swift Package Manager</li>
+            <li>Native menu bar integration</li>
+            <li>Xcode build system</li>
+            <li>First-run setup wizard</li>
+            <li>QR code generation for WiFi setup</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="arch-card fade-in-up">
+        <div class="card-icon">🐳</div>
+        <h3 class="card-title">OpenMoxie Backend</h3>
+        <p class="card-description">
+          Django server running in Docker provides the brain. SimpleMoxieSwitcher is just the friendly face.
+        </p>
+        <ul class="feature-list">
+          <li>Django Python backend</li>
+          <li>Docker containerized</li>
+          <li>Runs on localhost:8003</li>
+          <li>HTTP/REST APIs</li>
+          <li>MQTT message broker integration</li>
+          <li>Robot control & AI processing</li>
+        </ul>
+      </div>
+
+      <div class="arch-card fade-in-up">
+        <div class="card-icon">⚡</div>
+        <h3 class="card-title">MQTT Real-Time Control</h3>
+        <p class="card-description">
+          Mosquitto MQTT broker enables instant communication with Moxie robot — no cloud required.
+        </p>
+        <ul class="feature-list">
+          <li>Mosquitto broker (via Homebrew)</li>
+          <li>Local network only</li>
+          <li>Real-time messaging</li>
+          <li>Topic-based routing</li>
+          <li>Persistent connections</li>
+          <li>No internet dependency</li>
+        </ul>
+      </div>
+
+      <div class="arch-card fade-in-up">
+        <div class="card-icon">🤖</div>
+        <h3 class="card-title">OpenAI Integration</h3>
+        <p class="card-description">
+          Dual AI personalities powered by OpenAI's API with content filtering for child safety.
+        </p>
+        <ul class="feature-list">
+          <li>OpenAI API integration</li>
+          <li>Child Mode: Simple, playful</li>
+          <li>Adult Mode: Professional advisor</li>
+          <li>Content filtering active</li>
+          <li>Conversation history</li>
+          <li>User-provided API key</li>
+        </ul>
+      </div>
+
+      <div class="arch-card fade-in-up">
+        <div class="card-icon">🔧</div>
+        <h3 class="card-title">Setup Requirements</h3>
+        <p class="card-description">
+          Everything you need to run SimpleMoxieSwitcher on your Mac.
+        </p>
+        <ul class="feature-list">
+          <li>macOS 14.0 or later (required)</li>
+          <li>Docker Desktop for Mac</li>
+          <li>Mosquitto MQTT broker</li>
+          <li>OpenMoxie Docker container</li>
+          <li>OpenAI API key</li>
+          <li>Physical Moxie robot</li>
+        </ul>
+      </div>
+
+      <div class="arch-card fade-in-up">
+        <div class="card-icon">📦</div>
+        <h3 class="card-title">Open Source & Simple</h3>
+        <p class="card-description">
+          MIT licensed with straightforward Swift Package Manager build system.
+        </p>
+        <ul class="feature-list">
+          <li>100% open source (MIT)</li>
+          <li>Swift Package Manager</li>
+          <li>Build with: swift build</li>
+          <li>Run with: swift run</li>
+          <li>No npm dependencies</li>
+          <li>Clean, auditable code</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="system-requirements-section fade-in-up">
+      <h3 class="requirements-title">How It All Connects</h3>
+      <div class="architecture-diagram">
+        <div class="arch-layer">
+          <div class="layer-header">
+            <span class="layer-icon">💻</span>
+            <span class="layer-name">SimpleMoxieSwitcher (macOS)</span>
+          </div>
+          <div class="layer-content">
+            <span class="tech-badge">Swift 5.9+</span>
+            <span class="tech-badge">AppKit UI</span>
+            <span class="tech-badge">Native Controls</span>
+          </div>
+        </div>
+
+        <div class="arch-arrow">↓</div>
+
+        <div class="arch-layer">
+          <div class="layer-header">
+            <span class="layer-icon">🐳</span>
+            <span class="layer-name">OpenMoxie Backend (Docker)</span>
+          </div>
+          <div class="layer-content">
+            <span class="tech-badge">Django Python</span>
+            <span class="tech-badge">HTTP APIs</span>
+            <span class="tech-badge">localhost:8003</span>
+          </div>
+        </div>
+
+        <div class="arch-arrow">↓</div>
+
+        <div class="arch-layer">
+          <div class="layer-header">
+            <span class="layer-icon">⚡</span>
+            <span class="layer-name">Mosquitto MQTT Broker</span>
+          </div>
+          <div class="layer-content">
+            <span class="tech-badge">Local Network</span>
+            <span class="tech-badge">Real-Time</span>
+            <span class="tech-badge">Port 1883</span>
+          </div>
+        </div>
+
+        <div class="arch-arrow">↓</div>
+
+        <div class="arch-layer">
+          <div class="layer-header">
+            <span class="layer-icon">🤖</span>
+            <span class="layer-name">Moxie Robot</span>
+          </div>
+          <div class="layer-content">
+            <span class="tech-badge">WiFi Connected</span>
+            <span class="tech-badge">Same Network</span>
+            <span class="tech-badge">MQTT Controlled</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="opensource-banner fade-in-up">
+      <div class="banner-content">
+        <h3 class="banner-title">
+          <span class="banner-icon">📖</span>
+          Open Source & Transparent
+        </h3>
+        <p class="banner-text">
+          Every line of code is available on GitHub. MIT license means you can use it, modify it,
+          and learn from it — no restrictions, no fees, no subscriptions.
+        </p>
+        <div class="banner-features">
+          <span class="feature-chip">✓ Full source code access</span>
+          <span class="feature-chip">✓ MIT License</span>
+          <span class="feature-chip">✓ Community contributions welcome</span>
+          <span class="feature-chip">✓ No telemetry or tracking</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
