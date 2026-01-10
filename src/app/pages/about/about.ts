@@ -84,13 +84,13 @@ export class AboutComponent implements OnInit {
     {
       name: 'macOS',
       description: 'Native Swift application for macOS 13.0 or later',
-      downloadUrl: 'https://openmoxie.org/downloads/SimpleMoxieSwitcher-1.0.0.dmg',
+      downloadUrl: 'https://github.com/AgewellEPM/SimpleMoxieSwitcher/releases/latest/download/SimpleMoxieSwitcher-1.0.0.dmg',
       icon: '🍎'
     },
     {
       name: 'Windows',
       description: 'Native C# application for Windows 10 (19041+) or Windows 11',
-      downloadUrl: 'https://openmoxie.org/downloads/SimpleMoxieSwitcher-Setup.exe',
+      downloadUrl: 'https://github.com/AgewellEPM/SimpleMoxieSwitcher/releases/latest/download/SimpleMoxieSwitcher-Setup.exe',
       icon: '🪟'
     },
     {
