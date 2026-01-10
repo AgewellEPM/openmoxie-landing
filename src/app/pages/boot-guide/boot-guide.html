@@ -1,0 +1,282 @@
+<div class="boot-guide-page">
+  <app-header></app-header>
+
+  <!-- Hero Section -->
+  <section class="boot-hero">
+    <div class="boot-hero-container">
+      <div class="hero-icon-container">
+        <img src="moxie-icon.png" alt="Moxie Icon" class="hero-icon" />
+      </div>
+
+      <div class="breadcrumb">
+        <a href="/" class="breadcrumb-link">Home</a>
+        <span class="breadcrumb-separator">/</span>
+        <span class="breadcrumb-current">Boot Guide</span>
+      </div>
+
+      <h1 class="boot-title">
+        How to Boot Up Your
+        <span class="title-gradient">Moxie Robot</span>
+      </h1>
+
+      <p class="boot-subtitle">
+        A complete guide to starting your Moxie robot and troubleshooting common boot issues.
+        This guide applies to both stock Moxie and OpenMoxie setups.
+      </p>
+
+      <div class="important-note">
+        <div class="note-icon">💡</div>
+        <div class="note-content">
+          <strong>Important:</strong> The QR code is normal and appears in both stock Moxie and OpenMoxie.
+          It simply means Moxie needs to bind to a server endpoint to finish starting. No QR = it hasn't
+          reached the "ready to connect" stage yet.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Start Steps -->
+  <section class="quick-start-section">
+    <div class="container">
+      <h2 class="section-title">Quick Start: Basic Boot Process</h2>
+      <p class="section-subtitle">Follow these steps to get your Moxie robot ready</p>
+
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-number">1</div>
+          <div class="step-icon">🔌</div>
+          <h3>Charge Moxie</h3>
+          <p>Keep Moxie plugged in for <strong>30-60 minutes</strong>. Even if the light is on, a weak battery can prevent proper boot.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">2</div>
+          <div class="step-icon">💡</div>
+          <h3>Check Chest Light</h3>
+          <p>Observe the chest light color and pattern. This indicates Moxie's current state (see indicator guide below).</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">3</div>
+          <div class="step-icon">🔄</div>
+          <h3>Power Cycle</h3>
+          <p>Unplug Moxie, wait 20-30 seconds, plug back in, then hold the power button for ~5 seconds.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">4</div>
+          <div class="step-icon">📱</div>
+          <h3>Look for QR Code</h3>
+          <p>QR code on screen = ready to connect. Dream bubbles = sleeping. Neither after long charge = battery or boot issue.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">5</div>
+          <div class="step-icon">⚡</div>
+          <h3>Try Different Charger</h3>
+          <p>Some chargers "work" but don't supply enough power for boot. Try a different outlet or USB power adapter.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">6</div>
+          <div class="step-icon">✅</div>
+          <h3>Ready for OpenMoxie</h3>
+          <p>Once you see the QR code, Moxie is ready. OpenMoxie setup is straightforward from here!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Chest Light Indicators -->
+  <section class="indicators-section">
+    <div class="container">
+      <h2 class="section-title">Understanding Chest Light Indicators</h2>
+      <p class="section-subtitle">What each light color and pattern means</p>
+
+      <div class="indicators-grid">
+        <div class="indicator-card" *ngFor="let indicator of chestLightIndicators" [class]="indicator.status">
+          <div class="indicator-header">
+            <div class="indicator-color" [class]="indicator.status">{{ indicator.color }}</div>
+            <div class="status-badge" [class]="indicator.status">
+              <span *ngIf="indicator.status === 'success'">✓</span>
+              <span *ngIf="indicator.status === 'warning'">⚠</span>
+              <span *ngIf="indicator.status === 'error'">✕</span>
+              <span *ngIf="indicator.status === 'normal'">○</span>
+            </div>
+          </div>
+          <h3>{{ indicator.meaning }}</h3>
+          <p class="indicator-action">{{ indicator.action }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Troubleshooting Common Issues -->
+  <section class="troubleshooting-section">
+    <div class="container">
+      <h2 class="section-title">Troubleshooting Common Boot Issues</h2>
+      <p class="section-subtitle">Solutions to the most frequent startup problems</p>
+
+      <div class="issues-list">
+        <div class="issue-card" *ngFor="let issue of commonIssues">
+          <div class="issue-header">
+            <div class="issue-icon">🔧</div>
+            <h3>{{ issue.symptom }}</h3>
+          </div>
+
+          <div class="issue-body">
+            <div class="causes-section">
+              <h4>Possible Causes:</h4>
+              <ul>
+                <li *ngFor="let cause of issue.causes">{{ cause }}</li>
+              </ul>
+            </div>
+
+            <div class="solution-section">
+              <h4>Solution:</h4>
+              <p>{{ issue.solution }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Advanced Troubleshooting -->
+  <section class="advanced-section">
+    <div class="container">
+      <h2 class="section-title">Advanced Troubleshooting</h2>
+
+      <div class="advanced-grid">
+        <div class="advanced-card">
+          <h3>🔋 Battery Degradation</h3>
+          <p>
+            <strong>Very common issue:</strong> Moxie robots use lithium batteries that degrade over time.
+            If your Moxie won't boot even after long charging, the battery may no longer hold sufficient charge.
+          </p>
+          <div class="solution-box">
+            <strong>Solution:</strong> Keep Moxie permanently plugged in during use. Many users successfully
+            run Moxie this way as a stationary device.
+          </div>
+        </div>
+
+        <div class="advanced-card">
+          <h3>🔄 Factory Reset</h3>
+          <p>
+            If Moxie is stuck in a boot loop (constantly restarting), a factory reset may help.
+            <strong>Note:</strong> This will erase all data on Moxie.
+          </p>
+          <div class="solution-box">
+            <strong>How to reset:</strong> Hold power button for 10+ seconds until Moxie shuts down completely.
+            Wait 30 seconds, then power on normally.
+          </div>
+        </div>
+
+        <div class="advanced-card">
+          <h3>📡 Network Connection</h3>
+          <p>
+            Once Moxie shows the QR code, it's trying to connect to a server. With OpenMoxie, this will be
+            your local computer instead of Embodied's cloud servers.
+          </p>
+          <div class="solution-box">
+            <strong>Next step:</strong> Follow the OpenMoxie setup guide to connect Moxie to your local server.
+            Download the app from the <a href="/">home page</a>.
+          </div>
+        </div>
+
+        <div class="advanced-card">
+          <h3>⚡ Power Supply Requirements</h3>
+          <p>
+            Moxie requires a stable 5V power supply with at least 2A current. Some USB chargers don't provide
+            enough power for the boot process.
+          </p>
+          <div class="solution-box">
+            <strong>Recommended:</strong> Use a high-quality USB wall adapter (like an iPad charger) or connect
+            to a powered USB 3.0 port on your computer.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- You're Not Doing Anything Wrong -->
+  <section class="reassurance-section">
+    <div class="container">
+      <div class="reassurance-box">
+        <div class="reassurance-icon">👍</div>
+        <h2>You're Not Doing Anything Wrong</h2>
+        <p>
+          These boot issues are extremely common with Moxie robots, especially as they age.
+          Battery degradation affects almost all units after extended use.
+        </p>
+        <p>
+          <strong>Once we get Moxie to show a QR code, OpenMoxie setup is straightforward.</strong>
+          The hardest part is just getting to that initial ready state.
+        </p>
+        <div class="next-steps">
+          <h3>What happens after the QR code appears?</h3>
+          <ul>
+            <li>Download and install OpenMoxie 2.0 on your computer</li>
+            <li>The app will automatically set up the local server</li>
+            <li>Scan the QR code to connect Moxie to OpenMoxie</li>
+            <li>Start using Moxie with full local control!</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEO Content -->
+  <section class="seo-content-section">
+    <div class="container">
+      <div class="seo-content">
+        <h2>Complete Moxie Robot Boot Guide</h2>
+
+        <p>
+          Booting up your <strong>Moxie robot</strong> can sometimes be challenging, especially if you're experiencing
+          common issues like no QR code, stuck blue chest light, or battery problems. This comprehensive guide covers
+          everything you need to know about <strong>starting your Moxie robot</strong> and preparing it for
+          <strong>OpenMoxie 2.0</strong> setup.
+        </p>
+
+        <h3>Understanding Moxie's Boot Process</h3>
+        <p>
+          When you power on your <strong>Moxie robot</strong>, it goes through several stages before reaching the
+          ready state (QR code display). The chest light provides visual feedback about the current boot stage.
+          Understanding these <strong>Moxie chest light indicators</strong> is essential for troubleshooting boot issues.
+        </p>
+
+        <h3>Common Moxie Boot Problems</h3>
+        <p>
+          The most frequent <strong>Moxie robot startup issues</strong> include battery degradation, insufficient power
+          supply, and boot loops. These problems affect both stock Moxie and robots being set up with
+          <strong>OpenMoxie</strong>. Battery issues are particularly common in older Moxie units.
+        </p>
+
+        <h3>Getting Ready for OpenMoxie Setup</h3>
+        <p>
+          Once your <strong>Moxie robot displays the QR code</strong>, it's ready to connect to a server. With
+          <strong>OpenMoxie 2.0</strong>, this connection goes to your local computer instead of cloud servers,
+          giving you complete privacy and control. The setup process is straightforward once Moxie reaches this ready state.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="container">
+      <h2 class="cta-title">Ready to Set Up OpenMoxie?</h2>
+      <p class="cta-subtitle">Once your Moxie shows the QR code, download OpenMoxie 2.0 to get started</p>
+
+      <div class="cta-buttons">
+        <a href="https://openmoxie.org/downloads/OpenMoxie-1.0.0-macOS.zip" class="btn-cta primary">
+          Download OpenMoxie 2.0
+        </a>
+        <a href="/about" class="btn-cta secondary">
+          Learn About OpenMoxie
+        </a>
+      </div>
+    </div>
+  </section>
+</div>

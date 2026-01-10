@@ -20,6 +20,14 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- Boot Guide -->
+  <url>
+    <loc>https://openmoxie.org/boot-guide</loc>
+    <lastmod>2026-01-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
   <!-- Download Links -->
   <url>
     <loc>https://openmoxie.org/downloads/Open Moxie 2.0-1.0.0.dmg</loc>
