@@ -1,0 +1,199 @@
+<div class="about-page">
+  <app-header></app-header>
+
+  <!-- Hero Section -->
+  <section class="about-hero">
+    <div class="about-hero-container">
+      <div class="breadcrumb">
+        <a href="/" class="breadcrumb-link">Home</a>
+        <span class="breadcrumb-separator">/</span>
+        <span class="breadcrumb-current">About SimpleMoxieSwitcher</span>
+      </div>
+
+      <h1 class="about-title">
+        Take Control of Your
+        <span class="title-gradient">Moxie Robot</span>
+      </h1>
+
+      <p class="about-subtitle">
+        SimpleMoxieSwitcher is a local-first control system that gives you complete control
+        over your Moxie robot without cloud subscriptions or monthly fees. Everything runs
+        on your computer.
+      </p>
+
+      <div class="about-badges">
+        <div class="badge">
+          <span class="badge-icon">🔒</span>
+          <span>100% Local</span>
+        </div>
+        <div class="badge">
+          <span class="badge-icon">💰</span>
+          <span>No Subscriptions</span>
+        </div>
+        <div class="badge">
+          <span class="badge-icon">🚀</span>
+          <span>3 Platforms</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Screenshot Gallery -->
+  <section class="screenshot-gallery">
+    <div class="container">
+      <h2 class="section-title">See It In Action</h2>
+      <p class="section-subtitle">Beautiful, intuitive interfaces for all platforms</p>
+
+      <div class="screenshots-grid">
+        <div class="screenshot-card">
+          <div class="screenshot-placeholder mac">
+            <div class="window-header">
+              <div class="window-dots">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <div class="window-title">SimpleMoxieSwitcher</div>
+            </div>
+            <div class="screenshot-content">
+              <div class="placeholder-text">macOS App</div>
+              <p class="placeholder-subtitle">Native Swift interface with full feature control</p>
+            </div>
+          </div>
+          <h3>macOS Application</h3>
+        </div>
+
+        <div class="screenshot-card">
+          <div class="screenshot-placeholder windows">
+            <div class="window-header windows">
+              <div class="window-title">SimpleMoxieSwitcher</div>
+              <div class="window-controls">
+                <span>─</span>
+                <span>□</span>
+                <span>×</span>
+              </div>
+            </div>
+            <div class="screenshot-content">
+              <div class="placeholder-text">Windows App</div>
+              <p class="placeholder-subtitle">Modern WinUI 3 design with 110% feature parity</p>
+            </div>
+          </div>
+          <h3>Windows Application</h3>
+        </div>
+
+        <div class="screenshot-card">
+          <div class="screenshot-placeholder ios">
+            <div class="ios-notch"></div>
+            <div class="screenshot-content">
+              <div class="placeholder-text">iOS Remote</div>
+              <p class="placeholder-subtitle">Control Moxie from anywhere in your home</p>
+            </div>
+          </div>
+          <h3>iOS Remote Control</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Grid -->
+  <section class="features-detailed">
+    <div class="container">
+      <h2 class="section-title">Powerful Features</h2>
+      <p class="section-subtitle">Everything you need to unlock Moxie's full potential</p>
+
+      <div class="features-grid">
+        <div class="feature-card" *ngFor="let feature of features">
+          <div class="feature-icon">{{ feature.icon }}</div>
+          <h3 class="feature-title">{{ feature.title }}</h3>
+          <p class="feature-description">{{ feature.description }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Platform Download Cards -->
+  <section class="platform-downloads">
+    <div class="container">
+      <h2 class="section-title">Choose Your Platform</h2>
+      <p class="section-subtitle">Available for macOS, Windows, and iOS</p>
+
+      <div class="platforms-grid">
+        <div class="platform-card" *ngFor="let platform of platforms">
+          <div class="platform-icon">{{ platform.icon }}</div>
+          <h3 class="platform-name">{{ platform.name }}</h3>
+          <p class="platform-description">{{ platform.description }}</p>
+          <a [href]="platform.downloadUrl" class="btn-download-platform">
+            Download
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path d="M10 3v12m0 0l-4-4m4 4l4-4M3 17h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technical Architecture -->
+  <section class="architecture-section">
+    <div class="container">
+      <h2 class="section-title">How It Works</h2>
+      <p class="section-subtitle">Local-first architecture for privacy and control</p>
+
+      <div class="architecture-diagram">
+        <div class="arch-node">
+          <div class="arch-icon">💻</div>
+          <div class="arch-label">Desktop App</div>
+          <div class="arch-description">Mac or Windows</div>
+        </div>
+
+        <div class="arch-arrow">→</div>
+
+        <div class="arch-node">
+          <div class="arch-icon">🐳</div>
+          <div class="arch-label">Docker Container</div>
+          <div class="arch-description">OpenMoxie Backend</div>
+        </div>
+
+        <div class="arch-arrow">→</div>
+
+        <div class="arch-node">
+          <div class="arch-icon">📡</div>
+          <div class="arch-label">MQTT Broker</div>
+          <div class="arch-description">Mosquitto</div>
+        </div>
+
+        <div class="arch-arrow">→</div>
+
+        <div class="arch-node">
+          <div class="arch-icon">🤖</div>
+          <div class="arch-label">Moxie Robot</div>
+          <div class="arch-description">Your WiFi Network</div>
+        </div>
+      </div>
+
+      <div class="architecture-note">
+        <strong>iOS Remote</strong> connects to your desktop app over local WiFi for remote control.
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="container">
+      <h2 class="cta-title">Ready to Get Started?</h2>
+      <p class="cta-subtitle">Download SimpleMoxieSwitcher and unlock full control of your Moxie robot today</p>
+
+      <div class="cta-buttons">
+        <a href="https://openmoxie.org/downloads/SimpleMoxieSwitcher-1.0.0.dmg" class="btn-cta primary">
+          Download for Mac
+        </a>
+        <a href="https://openmoxie.org/downloads/SimpleMoxieSwitcher-Setup.exe" class="btn-cta primary">
+          Download for Windows
+        </a>
+        <a href="/" class="btn-cta secondary">
+          Back to Home
+        </a>
+      </div>
+    </div>
+  </section>
+</div>
