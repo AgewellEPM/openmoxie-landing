@@ -18,24 +18,24 @@ export class AboutComponent implements OnInit {
 
   ngOnInit() {
     // SEO Meta Tags for About Page
-    this.title.setTitle('About SimpleMoxieSwitcher | Moxie Robot Control Software | OpenMoxie');
+    this.title.setTitle('About Open Moxie 2.0 | Moxie Robot Control Software | OpenMoxie');
 
     this.meta.updateTag({
       name: 'description',
-      content: 'Learn about SimpleMoxieSwitcher - the free Moxie robot control software. Features AI conversations, educational games, parental controls for Embodied Moxie robots. Available for Mac, Windows & iOS.'
+      content: 'Learn about Open Moxie 2.0 - the free Moxie robot control software. Features AI conversations, educational games, parental controls for Embodied Moxie robots. Available for Mac, Windows & iOS.'
     });
 
     this.meta.updateTag({
       name: 'keywords',
-      content: 'Moxie Robot software, Open Moxie about, Moxie AI features, SimpleMoxieSwitcher features, Moxie robot app, Embodied Moxie control, Moxie educational games, Moxie parental controls, free Moxie software'
+      content: 'Moxie Robot software, Open Moxie about, Moxie AI features, Open Moxie 2.0 features, Moxie robot app, Embodied Moxie control, Moxie educational games, Moxie parental controls, free Moxie software'
     });
 
-    this.meta.updateTag({ property: 'og:title', content: 'About SimpleMoxieSwitcher - Moxie Robot Control Software' });
-    this.meta.updateTag({ property: 'og:description', content: 'Learn about SimpleMoxieSwitcher - the free Moxie robot control software with AI conversations, educational games, and parental controls.' });
+    this.meta.updateTag({ property: 'og:title', content: 'About Open Moxie 2.0 - Moxie Robot Control Software' });
+    this.meta.updateTag({ property: 'og:description', content: 'Learn about Open Moxie 2.0 - the free Moxie robot control software with AI conversations, educational games, and parental controls.' });
     this.meta.updateTag({ property: 'og:url', content: 'https://openmoxie.org/about' });
 
-    this.meta.updateTag({ name: 'twitter:title', content: 'About SimpleMoxieSwitcher - Moxie Robot Control Software' });
-    this.meta.updateTag({ name: 'twitter:description', content: 'Learn about SimpleMoxieSwitcher - the free Moxie robot control software with AI conversations, educational games, and parental controls.' });
+    this.meta.updateTag({ name: 'twitter:title', content: 'About Open Moxie 2.0 - Moxie Robot Control Software' });
+    this.meta.updateTag({ name: 'twitter:description', content: 'Learn about Open Moxie 2.0 - the free Moxie robot control software with AI conversations, educational games, and parental controls.' });
   }
   features = [
     {
@@ -84,7 +84,7 @@ export class AboutComponent implements OnInit {
     {
       name: 'macOS',
       description: 'Native Swift application for macOS 13.0 or later',
-      downloadUrl: 'https://openmoxie.org/downloads/SimpleMoxieSwitcher-1.0.0-macOS.zip',
+      downloadUrl: 'https://openmoxie.org/downloads/OpenMoxie-1.0.0-macOS.zip',
       icon: '🍎'
     },
     {
