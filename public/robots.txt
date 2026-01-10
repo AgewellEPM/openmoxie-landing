@@ -1,0 +1,31 @@
+# OpenMoxie - Robots.txt
+# Moxie Robot Control Software
+
+User-agent: *
+Allow: /
+Allow: /about
+Allow: /downloads/
+
+# Sitemap
+Sitemap: https://openmoxie.org/sitemap.xml
+
+# Block common bot paths
+Disallow: /api/
+Disallow: /admin/
+Disallow: /*.json$
+
+# Crawl delay for polite bots
+Crawl-delay: 1
+
+# Special instructions for major search engines
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 1

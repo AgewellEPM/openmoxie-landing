@@ -413,6 +413,47 @@
   margin: 0 auto;
 }
 
+/* SEO Content Section */
+.seo-content-section {
+  padding: 80px 0;
+  background: rgba(10, 10, 20, 0.5);
+}
+
+.seo-content {
+  max-width: 900px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+.seo-content h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  text-align: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.seo-content h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 2rem 0 1rem;
+  color: #667eea;
+}
+
+.seo-content p {
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 1.5rem;
+}
+
+.seo-content strong {
+  color: #fff;
+  font-weight: 600;
+}
+
 /* CTA Section */
 .cta-section {
   padding: 100px 2rem;

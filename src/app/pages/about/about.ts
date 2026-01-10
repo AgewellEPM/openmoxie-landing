@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from '../../components/header/header';
+import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-about',
@@ -9,7 +10,33 @@ import { HeaderComponent } from '../../components/header/header';
   styleUrl: './about.css',
   standalone: true
 })
-export class AboutComponent {
+export class AboutComponent implements OnInit {
+  constructor(
+    private meta: Meta,
+    private title: Title
+  ) {}
+
+  ngOnInit() {
+    // SEO Meta Tags for About Page
+    this.title.setTitle('About SimpleMoxieSwitcher | Moxie Robot Control Software | OpenMoxie');
+
+    this.meta.updateTag({
+      name: 'description',
+      content: 'Learn about SimpleMoxieSwitcher - the free Moxie robot control software. Features AI conversations, educational games, parental controls for Embodied Moxie robots. Available for Mac, Windows & iOS.'
+    });
+
+    this.meta.updateTag({
+      name: 'keywords',
+      content: 'Moxie Robot software, Open Moxie about, Moxie AI features, SimpleMoxieSwitcher features, Moxie robot app, Embodied Moxie control, Moxie educational games, Moxie parental controls, free Moxie software'
+    });
+
+    this.meta.updateTag({ property: 'og:title', content: 'About SimpleMoxieSwitcher - Moxie Robot Control Software' });
+    this.meta.updateTag({ property: 'og:description', content: 'Learn about SimpleMoxieSwitcher - the free Moxie robot control software with AI conversations, educational games, and parental controls.' });
+    this.meta.updateTag({ property: 'og:url', content: 'https://openmoxie.org/about' });
+
+    this.meta.updateTag({ name: 'twitter:title', content: 'About SimpleMoxieSwitcher - Moxie Robot Control Software' });
+    this.meta.updateTag({ name: 'twitter:description', content: 'Learn about SimpleMoxieSwitcher - the free Moxie robot control software with AI conversations, educational games, and parental controls.' });
+  }
   features = [
     {
       icon: '🤖',
