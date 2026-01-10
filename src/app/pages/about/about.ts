@@ -84,19 +84,19 @@ export class AboutComponent implements OnInit {
     {
       name: 'macOS',
       description: 'Native Swift application for macOS 13.0 or later',
-      downloadUrl: 'https://github.com/AgewellEPM/SimpleMoxieSwitcher/releases/latest/download/SimpleMoxieSwitcher-1.0.0.dmg',
+      downloadUrl: 'https://openmoxie.org/downloads/SimpleMoxieSwitcher-1.0.0-macOS.zip',
       icon: '🍎'
     },
     {
       name: 'Windows',
-      description: 'Native C# application for Windows 10 (19041+) or Windows 11',
-      downloadUrl: 'https://github.com/AgewellEPM/SimpleMoxieSwitcher/releases/latest/download/SimpleMoxieSwitcher-Setup.exe',
+      description: 'Native C# application for Windows 10 (19041+) or Windows 11 - Coming Soon',
+      downloadUrl: '#',
       icon: '🪟'
     },
     {
       name: 'iOS Remote',
-      description: 'Control Moxie from your iPhone or iPad',
-      downloadUrl: 'https://testflight.apple.com/join/YOUR_TESTFLIGHT_CODE',
+      description: 'Control Moxie from your iPhone or iPad - Coming to App Store',
+      downloadUrl: '#',
       icon: '📱'
     }
   ];
